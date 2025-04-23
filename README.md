@@ -1,25 +1,24 @@
-# 🛡 Splunk SIEM: Windows Threat Detection Project
+# 🛡 Splunk SIEM: Windows Log Monitoring Project
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen) ![Platform](https://img.shields.io/badge/Platform-Windows-blue) ![Log](https://img.shields.io/badge/Log-Windows_XML_Log-yellow)
 
-This project uses Splunk to detect brute-force login attempts on a Windows machine by monitoring Event Logs in real time.
+This project demonstrates how to use Splunk to monitor various Windows Event Logs for security insights.
 
-## 🎯 Use Case: Brute-force Detection
-Detect repeated failed logins (EventCode 4625) using SPL:
+## ✅ Use Cases
+### 1. Brute-force Login Detection
+Detects failed login attempts using EventCode 4625 from Security logs.
 
+### 2. Application Crash Detection
+Monitors application logs for forcibly terminated services using EventCode 10024.
 
-index=main OR index=default sourcetype=WinEventLog:Security EventCode=4625
-| stats count by Account_Name, Workstation_Name
-| where count > 5
-```
+### 3. System Event Analysis
+Note: No significant data was returned from the system logs during this session, but the query and configuration are included for completeness.
+Indexes system logs to monitor general Windows behavior like service startups and shutdowns.
+
+## 📁 Included Files
+- `queries/` - SPL queries for each use case
+- `report.pdf` - Full documentation of the project
+- `screenshots/` - Dashboards and search result visuals
 
 ## 🧰 Tools Used
-- Splunk Enterprise (Free Trial)
-- Windows 10
-- Local Event Logs: Security, System
-
-## 📁 Folder Structure
-- `queries/` - SPL detection queries
-- `screenshots/` - Dashboard screenshots
-- `report.pdf` - Full documentation of the use case
-
-## ✅ Result
-Splunk successfully detected 10 failed login attempts for user `FARAWAY$`, displayed in the dashboard titled `Windows Threat Monitoring`.
+- Splunk Enterprise (Free)
+- Windows 10 Event Logs: Security, Application, System
