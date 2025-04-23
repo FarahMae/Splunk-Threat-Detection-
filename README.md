@@ -1,5 +1,5 @@
 # 🛡 Splunk SIEM: Windows Log Monitoring 
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen) ![Platform](https://img.shields.io/badge/Platform-Windows-blue) ![Log](https://img.shields.io/badge/Log-Windows_Event_Log-yellow)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen) ![Platform](https://img.shields.io/badge/Platform-Windows-blue) ![Log](https://img.shields.io/badge/Log-Splunk_Log-yellow)
 
 This project demonstrates how to use Splunk to monitor various Windows Event Logs for security insights.
 
